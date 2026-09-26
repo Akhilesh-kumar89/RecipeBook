@@ -30,7 +30,9 @@ mongoose
   )
   .then(() => console.log("MongoDB is Connected..!"))
   .catch((err) => console.log(err.message));
-
+app.get("/", (req, res) => {
+  res.send("RecipeBook API is running 🚀");
+});
 const port = 3000;
 app.listen(port, () => console.log(`server is running on port ${port}`));
 
